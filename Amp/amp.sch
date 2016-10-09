@@ -2835,7 +2835,8 @@ Source: www.national.com/pf/LM/LM334.html | LM134.pdf</description>
 </library>
 </libraries>
 <attributes>
-<attribute name="CNAME" value="Odd man out headphone amplifier"/>
+<attribute name="CNAME" value="Odd Man Out Headphone Amplifier"/>
+<attribute name="CREVISION" value="1"/>
 <attribute name="DESIGNER" value="Eugene Zagidullin"/>
 </attributes>
 <variantdefs>
@@ -2899,8 +2900,10 @@ Source: www.national.com/pf/LM/LM334.html | LM134.pdf</description>
 <part name="C1" library="SparkFun-Capacitors" deviceset="CAP" device="PTH" value="1uF"/>
 <part name="GND1" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
 <part name="X1" library="con-wago-500" deviceset="W237-103" device=""/>
-<part name="X2" library="con-wago-500" deviceset="W237-102" device=""/>
+<part name="X3" library="con-wago-500" deviceset="W237-102" device=""/>
 <part name="GND6" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
+<part name="GND8" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
+<part name="X2" library="con-wago-500" deviceset="W237-102" device=""/>
 <part name="GND7" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
 </parts>
 <sheets>
@@ -2960,10 +2963,13 @@ Source: www.national.com/pf/LM/LM334.html | LM134.pdf</description>
 <instance part="X1" gate="-1" x="228.6" y="162.56"/>
 <instance part="X1" gate="-2" x="228.6" y="157.48"/>
 <instance part="X1" gate="-3" x="228.6" y="152.4"/>
-<instance part="X2" gate="-1" x="228.6" y="124.46"/>
-<instance part="X2" gate="-2" x="228.6" y="119.38"/>
+<instance part="X3" gate="-1" x="228.6" y="124.46"/>
+<instance part="X3" gate="-2" x="228.6" y="119.38"/>
 <instance part="GND6" gate="1" x="236.22" y="157.48" rot="R90"/>
-<instance part="GND7" gate="1" x="236.22" y="119.38" rot="R90"/>
+<instance part="GND8" gate="1" x="236.22" y="119.38" rot="R90"/>
+<instance part="X2" gate="-1" x="228.6" y="142.24"/>
+<instance part="X2" gate="-2" x="228.6" y="137.16"/>
+<instance part="GND7" gate="1" x="236.22" y="137.16" rot="R90"/>
 </instances>
 <busses>
 </busses>
@@ -3241,6 +3247,11 @@ Source: www.national.com/pf/LM/LM334.html | LM134.pdf</description>
 <wire x1="30.48" y1="109.22" x2="20.32" y2="109.22" width="0.1524" layer="91"/>
 <label x="20.32" y="109.22" size="1.778" layer="95" rot="R180" xref="yes"/>
 </segment>
+<segment>
+<pinref part="X2" gate="-1" pin="KL"/>
+<wire x1="233.68" y1="142.24" x2="236.22" y2="142.24" width="0.1524" layer="91"/>
+<label x="236.22" y="142.24" size="1.778" layer="95" xref="yes"/>
+</segment>
 </net>
 <net name="N$16" class="0">
 <segment>
@@ -3331,7 +3342,7 @@ Source: www.national.com/pf/LM/LM334.html | LM134.pdf</description>
 <label x="101.6" y="58.42" size="1.778" layer="95" rot="R90" xref="yes"/>
 </segment>
 <segment>
-<pinref part="X2" gate="-1" pin="KL"/>
+<pinref part="X3" gate="-1" pin="KL"/>
 <wire x1="233.68" y1="124.46" x2="236.22" y2="124.46" width="0.1524" layer="91"/>
 <label x="236.22" y="124.46" size="1.778" layer="95" xref="yes"/>
 </segment>
@@ -3393,6 +3404,10 @@ Source: www.national.com/pf/LM/LM334.html | LM134.pdf</description>
 <segment>
 <pinref part="X1" gate="-2" pin="KL"/>
 <pinref part="GND6" gate="1" pin="GND"/>
+</segment>
+<segment>
+<pinref part="X3" gate="-2" pin="KL"/>
+<pinref part="GND8" gate="1" pin="GND"/>
 </segment>
 <segment>
 <pinref part="X2" gate="-2" pin="KL"/>
